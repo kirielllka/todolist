@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content%}
+<br>
+
+{% if user.is_authenticated%}
+{%for todo in todos%}
+<div class="memos">
+<h3>{{todo.title}} <br><br> {{todo.memo}}</h3>
+</div>
+{%endfor%}
+{%endif%}
+{%endblock%}

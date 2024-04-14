@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Todo</title>
+</head>
+<body>
+{% extends 'base.html' %}
+    {%block content%}
+    {{error}}
+    <form method="POST">
+         {% csrf_token %}{{form}}
+        <button type="submit">Save</button>
+    </form>
+    {%endblock%}
+</body>
+</html>
